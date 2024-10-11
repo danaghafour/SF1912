@@ -1,4 +1,4 @@
-%% Simulation of confidence intervals
+%% Problem 1 - Simulation of confidence intervals
 
 % Parameters:
 n = 25;               % Number of measurements (sample size for each interval)
@@ -76,9 +76,9 @@ title('Histogram of Wave Data')
 % Number of data points in the wave_data
 n = length(y);
 % Maximum Likelihood Estimate (MLE) a method of estimating the parameters of an assumed probability distribution, given some observed data
-my_est = sqrt(sum(y.^2) / (2 * M));
+my_est = sqrt(sum(y.^2) / (2 * n));
 % Least Squares Estimate (LSE) 
-my_est_ls = (2 / (M * pi)) * sum(y);
+my_est_ls = (2 / (n * pi)) * sum(y);
 
 % Confidence interval calculation (95% confidence level)
 alpha = 0.05;  % Confidence level (5% significance level)
